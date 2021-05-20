@@ -2,13 +2,6 @@
 
 import java.util.LinkedList;
 
-/**
- * Class to keep a global reference to the epsilon terminal rule.
- * 
- * @author Robert Rayborn, James McCarty, & Logan Blyth
- *
- */
-
 public class EpsilonRule
 {
 	private static TerminalRule epsilon;

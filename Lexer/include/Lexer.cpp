@@ -227,7 +227,7 @@ void generateTokens(string filename){
 int main(int argc, char** argv){
     symtab = new SymbolTable("../../Output/symboltable.csv","../../tokens.tok");
     errortab = new SymbolTable("../../Output/errortab.csv","../../error_tokens.tok");
-    generateTokens("../../Input/test2.c");   
+    generateTokens("../../Input/test4.c");   
     return 0;
 }
 

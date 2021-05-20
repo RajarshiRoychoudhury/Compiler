@@ -1,7 +1,6 @@
 /**
  * * Assignment-3 of Compiler Design
  * * @written by Shubham Kumar, Rajarshi Roychoudhary, Arka Maji, Susanka Mazumdar
- * * Symbol Table header file
 */
 
 

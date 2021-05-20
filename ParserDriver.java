@@ -6,30 +6,6 @@ public class ParserDriver
 {
 	private static boolean verbose;
 	
-	/**
-	 * * If there are zero, three, or four input arguments then we are running a full parse table build and file parse
-	 * *		If there are zero inputs then 
-	 * *			we use the default scanner file "scan.txt"
-	 * *			we use the default grammar file "grammar.txt"
-	 * *			we use save the parse table to the default "parseTable.csv"
-	 * *		Else are three or four inputs then 
-	 * *			the first argument is the scanner file location
-	 * *			the second argument is the grammar file location
-	 * *			the third argument is the file location to save the parse table at (make sure to end in .csv if you want to read it in a spreadsheet editor)
-	 * *			If there are three inputs then
-	 * *				Verbose mode is off
-	 * *			Elseif the fourth input is -v then
-	 * *				Verbose mode is on (verbose mode is off with any other input)
-	 * * Elseif there are one or two input arguments then we are just building the parse table
-	 * *		If there are one inputs then
-	 * *			the input is the grammar file location
-	 * *		Else there are two inputs then
-	 * *			the first argument is the grammar file location 
-	 * *			the second argument is the file location to save the parse table at (make sure to end in .csv if you want to read it in a spreadsheet editor)
-	 * * Else the program will throw an error
-	 * 
-	 * @param args
-	 */
 
 	public static void main(String[] args)
 	{
@@ -38,16 +14,8 @@ public class ParserDriver
 		ParserGenerator parserGenerator;
 		LinkedList<String> input;
 
-		// Assign file names
-		if(args.length == 0)	// no parameters given
-		{
-			// Set default paramenters
-			scannerFile = "scan.txt";
-			grammarFile = "../grammar.txt";
-			parseTableFile = "parseTable.csv";
-			verbose = false;
-		}
-		else if(args.length == 3)	// all parameters given except for verbose
+
+		if(args.length == 3)	// all parameters given except for verbose
 		{
 			// Assign any input parameter
 			scannerFile = args[0];
@@ -68,14 +36,6 @@ public class ParserDriver
 			// Assign any input parameter
 			grammarFile = args[0];
 			parseTableFile = args[1];
-			scannerFile = null;
-			verbose = false;
-		}
-		else if(args.length == 1)	// parse table only
-		{
-			// Assign any input parameter
-			grammarFile = args[0];
-			parseTableFile = "parseTable.csv";
 			scannerFile = null;
 			verbose = false;
 		}
